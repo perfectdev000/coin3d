@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>three.js webgl - loaders - OBJ loader</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+
+        <script src="./three.min.js"></script>
+        <script src="./OBJLoader.js"></script>
+        <script src="coin.js"></script>
+
+        <style>
+            .container {
+                position: relative;
+                width: 512px;
+                height: 512px;
+                background-color: #4444ee;
+                display: inline-block;
+            }
+
+        </style>
+
+	</head>
+
+	<body>
+
+        <div id="container1" class="container"></div>
+        <video id="video1" loop muted autostart crossOrigin="anonymous" playsinline style="display:none"></video>        
+
+		<script type="module"> 
+            var coin1 = new Coin( document.getElementById("container1"),
+                                document.getElementById("video1"),
+                                'bandicam.mp4', 512, 512 );
+            coin1.init();
+
+            // var coin2 = new Coin( document.getElementById("container2"), 
+            //                     document.getElementById("video2"),
+            //                     'assets/ouput_s1.mov', 512, 512 );
+            // coin2.init();
+
+		</script>
+
+	</body>
+</html>
